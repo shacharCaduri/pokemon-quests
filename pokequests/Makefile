@@ -114,7 +114,7 @@ RAMSCRGEN := tools/ramscrgen/ramscrgen
 FIX := tools/gbafix/gbafix
 MAPJSON := tools/mapjson/mapjson
 JSONPROC := tools/jsonproc/jsonproc
-SCRIPT := tools/poryscript/poryscript$(EXE)
+#poryscript: SCRIPT := tools/poryscript/poryscript$(EXE)
 
 PERL := perl
 
@@ -226,7 +226,7 @@ include songs.mk
 %.png: ;
 %.pal: ;
 %.aif: ;
-%.pory: ;
+#poryscript: %.pory: ;
 
 %.1bpp: %.png  ; $(GFX) $< $@
 %.4bpp: %.png  ; $(GFX) $< $@
@@ -237,7 +237,7 @@ include songs.mk
 %.rl: % ; $(GFX) $< $@
 $(CRY_SUBDIR)/%.bin: $(CRY_SUBDIR)/%.aif ; $(AIF) $< $@ --compress
 sound/%.bin: sound/%.aif ; $(AIF) $< $@
-data/%.inc: data/%.pory; $(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json
+#poryscript: data/%.inc: data/%.pory; $(SCRIPT) -i $< -o $@ -fc tools/poryscript/font_config.json
 sound/songs/%.s: sound/songs/%.mid
 	$(MID) $< $@
 
