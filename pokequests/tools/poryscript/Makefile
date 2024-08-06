@@ -5,6 +5,9 @@ POY_FILES = $(wildcard $(SRC_DIR)/*.pory)
 DEST_POY_FILES = $(wildcard $(DEST_DIR)/*.pory)
 POY_POSTFIX = _pory
 INC_FILES = $(POY_FILES:$(SRC_DIR)/%.pory=$(DEST_DIR)/%$(POY_POSTFIX).inc)
+MAPS_DIRS = $(wildcard ../../data/maps/*)
+SRC_MAPS_DIRS = $(wildcard ../../data/poryscripts/maps/*)
+MAPS_INCS = $($(SRC_MAPS_DIRS):$(SRC_MAPS_DIRS)/%.pory=%.inc)
 
 # Default target
 all: copy_files process_files restore_files clean
@@ -40,6 +43,11 @@ remove_pory_files:
 clean_pory_incs:
 	@echo "Cleaning up *_pory.inc files from $(DEST_DIR)..."
 	@rm -f $(DEST_DIR)/*_pory.inc
+
+
+copy_map_files:
+	@echo "Copy poryscript files from data/poryscripts/maps to data/maps..."
+	@cp -r $(SRC_MAPS_DIRS)/* $(MAPS_DIRS)/
 
 # Phony targets
 .PHONY: all copy_files process_files clean restore_files remove_pory_files clean_pory_incs
