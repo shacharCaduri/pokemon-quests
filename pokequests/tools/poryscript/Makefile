@@ -1,8 +1,9 @@
 # Define variables for directories and files
 SRC_DIRS = ../../data/poryscripts/maps
 DST_DIRS = ../../data/maps
-WC_SRC_PORY = $(wildcard $(SRC_DIRS)/**/*.pory)
-WC_DST_PORY = $(wildcard $(DST_DIRS)/**/*.pory)
+WC_SRC_PORY := $(wildcard $(SRC_DIRS)/**/*.pory)
+WC_DST_PORY := $(wildcard $(DST_DIRS)/**/*.pory)
+WC_DST_DIRS := $(wildcard $(DST_DIRS)/**) 
 POSTFIX = _pory
 PORY_COMPILER = ../../tools/poryscript/poryscript
 FONT_CONF_PATH = ../../tools/poryscript/font_config.json
@@ -28,7 +29,7 @@ compile: $(patsubst \
 	$(WC_DST_PORY)\
 )
 	
-$(DST_DIRS)/%$(POSTFIX).inc: $(DST_DIR)/%.pory
+$(DST_DIRS)/%$(POSTFIX).inc: $(DST_DIRS)/%.pory
 	@echo "Compiling $< to produce $@.."
 	$(PORY_COMPILER) -i $< -o $@ -fc $(FONT_CONF_PATH)
 
