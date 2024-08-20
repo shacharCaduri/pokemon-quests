@@ -1,53 +1,35 @@
 # Define variables for directories and files
-SRC_DIR = ../../data/poryscripts
-DEST_DIR = ../../data/scripts
-POY_FILES = $(wildcard $(SRC_DIR)/*.pory)
-DEST_POY_FILES = $(wildcard $(DEST_DIR)/*.pory)
-POY_POSTFIX = _pory
-INC_FILES = $(POY_FILES:$(SRC_DIR)/%.pory=$(DEST_DIR)/%$(POY_POSTFIX).inc)
-MAPS_DIRS = $(wildcard ../../data/maps/*)
-SRC_MAPS_DIRS = $(wildcard ../../data/poryscripts/maps/*)
-MAPS_INCS = $($(SRC_MAPS_DIRS):$(SRC_MAPS_DIRS)/%.pory=%.inc)
+SRC_DIRS = ../../data/poryscripts/maps
+DST_DIRS = ../../data/maps
+WC_SRC_PORY = $(wildcard $(SRC_DIRS)/**/*.pory)
+WC_DST_PORY = $(wildcard $(DST_DIRS)/**/*.pory)
+PREFIX = pory_
+PORY_COMPILER = ../../tools/poryscript/poryscript
+FONT_CONF_PATH = ../../tools/poryscript/font_config.json
 
-# Default target
-all: copy_files process_files restore_files clean
+all: copy_pory_files compile
 
-# Copy .pory files from SRC_DIR to DEST_DIR
-copy_files:
-	@echo "Copying .pory files from $(SRC_DIR) to $(DEST_DIR)..."
-	@cp $(SRC_DIR)/*.pory $(DEST_DIR)/
+copy_pory_files: $(patsubst \
+	$(SRC_DIRS)/%.pory,\
+	$(DST_DIRS)/%.pory,\
+	$(WC_SRC_PORY)\
+)
 
-# Process .pory files with poryscript
-process_files: $(INC_FILES)
+$(DST_DIRS)/%.pory: $(SRC_DIRS)/%.pory
+	@echo "Copying $< to $@.."
+	@cp $< $@
 
-$(DEST_DIR)/%$(POY_POSTFIX).inc: $(DEST_DIR)/%.pory
-	@echo "Processing $<, Targets $@"
-	@./poryscript -i $< -o $@ -fc tools/poryscript/font_config.json
+clean_pory_files:
+	@rm -f $(DST_DIRS)/**/*.pory
 
-# Clean target
-clean: remove_pory_files
+compile: $(patsubst \
+	$(DST_DIRS)/%.pory,\
+	$(DST_DIRS)/$(PREFIX)%.inc,\
+	$(WC_DST_PORY)\
+)
+	
+$(DST_DIRS)/$(PREFIX)%.inc: $(DST_DIR)/%.pory
+	@echo "Compiling $< to $@.."
+	$(PORY_COMPILER) -i $< -o $@ -fc $(FONT_CONF_PATH)
 
-# Restore .pory files from DEST_DIR to SRC_DIR
-restore_files:
-	@echo "Restoring .pory files from $(DEST_DIR) to $(SRC_DIR)..."
-	@if ls $(DEST_DIR)/*.pory 1> /dev/null 2>&1; then cp $(DEST_DIR)/*.pory $(SRC_DIR)/; fi
-
-# Remove .pory files from DEST_DIR
-remove_pory_files:
-	@echo "Cleaning up .pory files from $(DEST_DIR)..."
-	@rm -f $(DEST_DIR)/*.pory
-
-# Remove all files from DEST_DIR that turned from .pory to .inc
-# the files that were turned from .pory to .inc have _pory before the .inc
-# and something like this: <somename>_pory.inc
-clean_pory_incs:
-	@echo "Cleaning up *_pory.inc files from $(DEST_DIR)..."
-	@rm -f $(DEST_DIR)/*_pory.inc
-
-
-copy_map_files:
-	@echo "Copy poryscript files from data/poryscripts/maps to data/maps..."
-	@cp -r $(SRC_MAPS_DIRS)/* $(MAPS_DIRS)/
-
-# Phony targets
-.PHONY: all copy_files process_files clean restore_files remove_pory_files clean_pory_incs
+.PHONY: all clean_pory_files
