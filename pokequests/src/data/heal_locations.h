@@ -20,7 +20,6 @@ static const struct HealLocation sSpawnPoints[] =
     [SPAWN_FIVE_ISLAND - 1] = {MAP_GROUP(FIVE_ISLAND), MAP_NUM(FIVE_ISLAND), 18, 7},
     [SPAWN_SEVEN_ISLAND - 1] = {MAP_GROUP(SEVEN_ISLAND), MAP_NUM(SEVEN_ISLAND), 12, 4},
     [SPAWN_SIX_ISLAND - 1] = {MAP_GROUP(SIX_ISLAND), MAP_NUM(SIX_ISLAND), 11, 12},
-    [SPAWN_DREAM_MAP - 1] = {MAP_GROUP(UNDEFINED), MAP_NUM(UNDEFINED), 0, 0},
 };
 
 static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
@@ -45,7 +44,6 @@ static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
     [SPAWN_FIVE_ISLAND - 1] = {MAP_GROUP(FIVE_ISLAND_POKEMON_CENTER_1F), MAP_NUM(FIVE_ISLAND_POKEMON_CENTER_1F)},
     [SPAWN_SEVEN_ISLAND - 1] = {MAP_GROUP(SEVEN_ISLAND_POKEMON_CENTER_1F), MAP_NUM(SEVEN_ISLAND_POKEMON_CENTER_1F)},
     [SPAWN_SIX_ISLAND - 1] = {MAP_GROUP(SIX_ISLAND_POKEMON_CENTER_1F), MAP_NUM(SIX_ISLAND_POKEMON_CENTER_1F)},
-    [SPAWN_DREAM_MAP - 1] = {MAP_GROUP(DREAM_MAP), MAP_NUM(DREAM_MAP)},
 };
 
 static const u8 sWhiteoutRespawnHealerNpcIds[] =
@@ -70,5 +68,4 @@ static const u8 sWhiteoutRespawnHealerNpcIds[] =
     [SPAWN_FIVE_ISLAND - 1] = 1,
     [SPAWN_SEVEN_ISLAND - 1] = 1,
     [SPAWN_SIX_ISLAND - 1] = 1,
-    [SPAWN_DREAM_MAP - 1] = 1,
 };
