@@ -1,0 +1,20 @@
+# data/poryscripts/check_pokemon_and_let_pass.pory
+
+# This script runs when you talk to NPC 0 on MyNewMap.
+script CheckPokemonAndLetPass {
+    lockall
+    faceplayer            # make the NPC turn toward the player
+
+    # Built-in variable party_count holds how many Pokémon in your party
+    if (checkplayergender() == MALE) {
+        # NPC 0 walks 1 tile to the left, then faces left
+        # npc 1 walk left 1
+        # npc 1 face left
+
+        msgbox("Thanks for showing your Pokémon! You may pass.")
+    }
+    else {
+        msgbox("Sorry, you need a Pokémon in your party to pass.")
+    }
+    releaseall
+}

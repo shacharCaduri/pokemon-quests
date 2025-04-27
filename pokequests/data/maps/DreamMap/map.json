@@ -18,10 +18,33 @@
       "map": "MAP_PALLET_TOWN_PLAYERS_HOUSE_2F",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_DREAM_MAP",
+      "offset": 0,
+      "direction": "emerge"
+    },
+    {
+      "map": "MAP_DREAM_MAP",
+      "offset": 0,
+      "direction": "dive"
     }
   ],
   "object_events": [
-
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_AGATHA",
+      "x": 14,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
+    }
   ],
   "warp_events": [
 
