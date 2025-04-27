@@ -1,0 +1,8 @@
+script MyScript {
+    msgbox(MyText)
+}
+
+text MyText {
+    "Hello, there.\p"
+    "You can refer to me in scripts or C code."
+}

@@ -1,0 +1,7 @@
+script CustomTest {
+    msgbox(TXT)
+}
+
+text TXT {
+    "Hello World"
+}
