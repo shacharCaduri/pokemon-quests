@@ -2,6 +2,6 @@ script CustomTest {
     msgbox(TXT)
 }
 
-text TXT {
+text HelloWorld_TXT {
     "Hello World"
 }
