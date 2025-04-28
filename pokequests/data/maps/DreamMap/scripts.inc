@@ -5,8 +5,12 @@ DreamMap_MapScripts::
 	.byte 0
 
 DreamMap_OnTransition::
-	@ setworldmapflag FLAG_WORLD_MAP_DREAM_MAP
-	msgbox DreamMap_Text_HelloWorld, MSGBOX_NPC 
+	setworldmapflag FLAG_WORLD_MAP_PALLET_TOWN
+	@msgbox DreamMap_Text_HelloWorld, MSGBOX_DEFAULT 
 	end
 
-	
+DreamMap_AgathaTalk::
+	lockall
+	msgbox DreamMap_Text_HelloWorld, MSGBOX_NPC
+	releaseall
+	end
