@@ -3,3 +3,7 @@ HasPokemonMsg:
 NoPokemonMsg:
     .string "Sorry, you need a Pokémon to pass."
 
+DreamMap_Text_HelloWorld:
+    .string "Hello, World!"
+
+    
