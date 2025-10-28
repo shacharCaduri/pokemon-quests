@@ -227,10 +227,36 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
 {
     u32 personality;
     s8 chamber;
+    bool8 isRooftopField = (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROOFTOP_FIELD) 
+                            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROOFTOP_FIELD));
+    
     ZeroEnemyPartyMons();
     if (species != SPECIES_UNOWN)
     {
-        CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        // Increase shiny chance for RooftopField: force shiny 50%
+        if (isRooftopField && (Random() % 2) == 0)
+        {
+            u32 otId = gSaveBlock2Ptr->playerTrainerId[0]
+                     | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
+                     | (gSaveBlock2Ptr->playerTrainerId[2] << 16)
+                     | (gSaveBlock2Ptr->playerTrainerId[3] << 24);
+            u32 shinyValue;
+            
+            // Generate a personality that makes this Pokemon shiny
+            do
+            {
+                personality = Random32();
+                shinyValue = GET_SHINY_VALUE(otId, personality);
+            } while (shinyValue >= SHINY_ODDS);
+            
+            // Create the Pokemon with the shiny personality
+            CreateMon(&gEnemyParty[0], species, level, USE_RANDOM_IVS, TRUE, personality, OT_ID_PLAYER_ID, 0);
+        }
+        else
+        {
+            // Normal Pokemon creation
+            CreateMonWithNature(&gEnemyParty[0], species, level, USE_RANDOM_IVS, Random() % NUM_NATURES);
+        }
     }
     else
     {

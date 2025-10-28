@@ -18,3 +18,7 @@ DreamMap_Text_MoveAside:
     .string "move aside please this is for people\n"
     .string "who actually have Pokémon.$"
 
+DreamMap_Text_HereSomePrizeItems:
+    .string "Here are some prize items for reaching\n"
+    .string "this stage of the game.$"
+

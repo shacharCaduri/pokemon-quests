@@ -27,6 +27,13 @@ DreamMap_AgathaTalk::
 	goto_if_eq DreamMap_AgathaTalk_NoPokemon
 	goto_if_set FLAG_AGATHA_MOVED_ASIDE, DreamMap_AgathaTalk_Repeat
 	msgbox DreamMap_Text_GoodYouCanPass, MSGBOX_NPC
+	msgbox DreamMap_Text_HereSomePrizeItems, MSGBOX_NPC
+	giveitem ITEM_ULTRA_BALL, 10
+	giveitem ITEM_TIMER_BALL, 10
+	giveitem ITEM_REPEAT_BALL, 10
+	giveitem ITEM_LUXURY_BALL, 10
+	giveitem ITEM_REVIVE, 5
+	giveitem ITEM_HYPER_POTION, 5
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, DreamMap_Movement_PlayerStepBack
 	waitmovement 0
