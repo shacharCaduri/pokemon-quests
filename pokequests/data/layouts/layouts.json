@@ -4389,9 +4389,21 @@
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PalletTown",
+      "secondary_tileset": "gTileset_BurgledHouse",
       "border_filepath": "data/layouts/DreamMap/border.bin",
       "blockdata_filepath": "data/layouts/DreamMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROOFTOP_FIELD",
+      "name": "RooftopField_Layout",
+      "width": 20,
+      "height": 20,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PalletTown",
+      "border_filepath": "data/layouts/RooftopField/border.bin",
+      "blockdata_filepath": "data/layouts/RooftopField/map.bin"
     }
   ]
 }

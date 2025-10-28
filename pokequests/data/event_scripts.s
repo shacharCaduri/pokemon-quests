@@ -1363,3 +1363,6 @@ Text_TestMsg::
 
 	.include "data/maps/DreamMap/scripts.inc"
 	.include "data/maps/DreamMap/text.inc"
+
+	.include "data/maps/RooftopField/scripts.inc"
+	.include "data/maps/RooftopField/text.inc"

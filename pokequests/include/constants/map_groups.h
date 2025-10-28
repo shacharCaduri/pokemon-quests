@@ -273,6 +273,7 @@
 #define MAP_PALLET_TOWN_RIVALS_HOUSE       (2 | (4 << 8))
 #define MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB (3 | (4 << 8))
 #define MAP_DREAM_MAP                      (4 | (4 << 8))
+#define MAP_ROOFTOP_FIELD                  (5 | (4 << 8))
 
 // gMapGroup_IndoorViridian
 #define MAP_VIRIDIAN_CITY_HOUSE             (0 | (5 << 8))
