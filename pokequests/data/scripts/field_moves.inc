@@ -59,7 +59,9 @@ Text_TreeCanBeCutDown::
 EventScript_RockSmash::
 	goto_if_questlog EventScript_ReleaseEnd
 	lockall
+	goto_if_set FLAG_IN_ROOFTOP_FIELD, EventScript_RockSmash_SkipBadge
 	goto_if_unset FLAG_BADGE06_GET, EventScript_CantSmashRock
+EventScript_RockSmash_SkipBadge::
 	checkpartymove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT

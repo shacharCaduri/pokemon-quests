@@ -1366,3 +1366,6 @@ Text_TestMsg::
 
 	.include "data/maps/RooftopField/scripts.inc"
 	.include "data/maps/RooftopField/text.inc"
+
+	.include "data/maps/RoofTopCave/scripts.inc"
+	.include "data/maps/RoofTopCave/text.inc"

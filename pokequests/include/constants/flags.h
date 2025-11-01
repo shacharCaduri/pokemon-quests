@@ -1223,8 +1223,8 @@
 
 // Unused hidden item flags
 #define FLAG_AGATHA_MOVED_ASIDE         0x4A7 // Agatha moved aside in DreamMap
-#define FLAG_UNUSED_0x4A8               0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9               0x4A9 // Unused Flag
+#define FLAG_AGATHA_GAVE_HM_POKEMON     0x4A8 // Agatha gave HM Pokemon
+#define FLAG_IN_ROOFTOP_FIELD           0x4A9 // Player is in RooftopField (allows HMs without badges)
 #define FLAG_UNUSED_0x4AA               0x4AA // Unused Flag
 #define FLAG_UNUSED_0x4AB               0x4AB // Unused Flag
 #define FLAG_UNUSED_0x4AC               0x4AC // Unused Flag

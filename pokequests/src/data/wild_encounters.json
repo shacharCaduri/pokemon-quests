@@ -25175,12 +25175,7 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_TORCHIC"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_MUDKIP"
+                "species": "SPECIES_TREECKO"
               },
               {
                 "min_level": 5,
@@ -25190,22 +25185,12 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_EEVEE"
+                "species": "SPECIES_BULBASAUR"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_TOTODILE"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_CYNDAQUIL"
-              },
-              {
-                "min_level": 5,
-                "max_level": 10,
-                "species": "SPECIES_PIKACHU"
+                "species": "SPECIES_BULBASAUR"
               },
               {
                 "min_level": 5,
@@ -25215,7 +25200,27 @@
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_UMBREON"
+                "species": "SPECIES_CHIKORITA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TREECKO"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_BULBASAUR"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHIKORITA"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 5,
@@ -25226,11 +25231,264 @@
                 "min_level": 5,
                 "max_level": 10,
                 "species": "SPECIES_UMBREON"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 40,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_SQUIRTLE"
               },
               {
                 "min_level": 5,
                 "max_level": 10,
-                "species": "SPECIES_PIKACHU"
+                "species": "SPECIES_MUDKIP"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TOTODILE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_DRATINI"
+              },
+              {
+                "min_level": 10,
+                "max_level": 20,
+                "species": "SPECIES_LAPRAS"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 100,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 5,
+                "max_level": 15,
+                "species": "SPECIES_LARVITAR"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROOFTOP_FIELD",
+          "base_label": "gRooftopField_2",
+          "land_mons": {
+            "encounter_rate": 40,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_BELDUM"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 7,
+                "max_level": 12,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 8,
+                "max_level": 14,
+                "species": "SPECIES_BELDUM"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROOF_TOP_CAVE",
+          "base_label": "gRoofTopCave",
+          "land_mons": {
+            "encounter_rate": 7,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_TORCHIC"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CHARMANDER"
+              },
+              {
+                "min_level": 5,
+                "max_level": 10,
+                "species": "SPECIES_CYNDAQUIL"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_TORKOAL"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_MAGBY"
+              },
+              {
+                "min_level": 7,
+                "max_level": 12,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 7,
+                "max_level": 12,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 8,
+                "max_level": 13,
+                "species": "SPECIES_LARVITAR"
+              }
+            ]
+          },
+          "rock_smash_mons": {
+            "encounter_rate": 50,
+            "mons": [
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_LARVITAR"
+              },
+              {
+                "min_level": 6,
+                "max_level": 10,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 7,
+                "max_level": 11,
+                "species": "SPECIES_BELDUM"
+              },
+              {
+                "min_level": 9,
+                "max_level": 13,
+                "species": "SPECIES_CUBONE"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_PUPITAR"
               }
             ]
           }

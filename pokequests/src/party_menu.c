@@ -3922,8 +3922,12 @@ static void CursorCB_FieldMove(u8 taskId)
     }
     else
     {
+        bool8 isRooftopField = (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROOFTOP_FIELD)
+                                && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROOFTOP_FIELD));
+        bool8 skipBadgeCheck = isRooftopField && (fieldMove == FIELD_MOVE_SURF || fieldMove == FIELD_MOVE_ROCK_SMASH);
+        
         // All field moves before WATERFALL are HMs.
-        if (fieldMove <= FIELD_MOVE_WATERFALL && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
+        if (fieldMove <= FIELD_MOVE_WATERFALL && !skipBadgeCheck && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewBadge, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;

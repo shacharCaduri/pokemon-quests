@@ -312,7 +312,8 @@
     "PalletTown_RivalsHouse",
     "PalletTown_ProfessorOaksLab",
     "DreamMap",
-    "RooftopField"
+    "RooftopField",
+    "RoofTopCave"
   ],
   "gMapGroup_IndoorViridian": [
     "ViridianCity_House",

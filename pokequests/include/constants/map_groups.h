@@ -274,6 +274,7 @@
 #define MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB (3 | (4 << 8))
 #define MAP_DREAM_MAP                      (4 | (4 << 8))
 #define MAP_ROOFTOP_FIELD                  (5 | (4 << 8))
+#define MAP_ROOF_TOP_CAVE                  (6 | (4 << 8))
 
 // gMapGroup_IndoorViridian
 #define MAP_VIRIDIAN_CITY_HOUSE             (0 | (5 << 8))

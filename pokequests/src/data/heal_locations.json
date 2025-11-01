@@ -159,6 +159,54 @@
       "y": 12,
       "respawn_map": "MAP_SIX_ISLAND_POKEMON_CENTER_1F",
       "respawn_npc": "LOCALID_SIX_ISLAND_NURSE"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 6,
+      "y": 7,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 7,
+      "y": 7,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 5,
+      "y": 8,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 5,
+      "y": 7,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE_2",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 7,
+      "y": 8,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
+    },
+    {
+      "id": "HEAL_LOCATION_ROOF_TOP_CAVE_3",
+      "map": "MAP_ROOF_TOP_CAVE",
+      "x": 6,
+      "y": 8,
+      "respawn_map": "MAP_ROOF_TOP_CAVE",
+      "respawn_npc": "1"
     }
   ]
 }

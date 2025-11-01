@@ -229,12 +229,14 @@ static void GenerateWildMon(u16 species, u8 level, u8 slot)
     s8 chamber;
     bool8 isRooftopField = (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROOFTOP_FIELD) 
                             && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROOFTOP_FIELD));
+    bool8 isRooftopCave = (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ROOF_TOP_CAVE) 
+                           && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ROOF_TOP_CAVE));
     
     ZeroEnemyPartyMons();
     if (species != SPECIES_UNOWN)
     {
-        // Increase shiny chance for RooftopField: force shiny 50%
-        if (isRooftopField && (Random() % 2) == 0)
+        // Increase shiny chance for RooftopField and RooftopCave: force shiny 50%
+        if ((isRooftopField || isRooftopCave) && (Random() % 2) == 0)
         {
             u32 otId = gSaveBlock2Ptr->playerTrainerId[0]
                      | (gSaveBlock2Ptr->playerTrainerId[1] << 8)
